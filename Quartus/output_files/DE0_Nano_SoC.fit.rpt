@@ -1,5 +1,5 @@
 Fitter report for DE0_Nano_SoC
-Thu Feb  7 23:39:32 2019
+Wed Feb 13 13:11:05 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Feb  7 23:39:32 2019       ;
+; Fitter Status                   ; Successful - Wed Feb 13 13:11:05 2019       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; DE0_Nano_SoC                                ;
 ; Top-level Entity Name           ; DE0_Nano_SoC_top_level                      ;
@@ -155,14 +155,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.28        ;
+; Average used               ; 1.27        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   9.2%      ;
-;     Processor 3            ;   9.2%      ;
-;     Processor 4            ;   9.2%      ;
+;     Processor 2            ;   9.0%      ;
+;     Processor 3            ;   9.0%      ;
+;     Processor 4            ;   9.0%      ;
 +----------------------------+-------------+
 
 
@@ -5738,12 +5738,12 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:12
-Info (11888): Total time spent on timing analysis during the Fitter is 2.88 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 2.87 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:32
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:33
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (169186): Following groups of pins have the same dynamic on-chip termination control
     Info (169185): Following pins have the same dynamic on-chip termination control: soc_system:soc_system_inst|soc_system_hps_0:hps_0|soc_system_hps_0_hps_io:hps_io|soc_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_p0:p0|hps_sdram_p0_acv_hard_memphy:umemphy|hps_sdram_p0_acv_hard_io_pads:uio_pads|hps_sdram_p0_altdqdqs:dq_ddio[3].ubidir_dq_dqs|altdq_dqs2_acv_connect_to_hard_phy_cyclonev:altdq_dqs2_inst|diff_dtc
@@ -5828,10 +5828,10 @@ Info (169186): Following groups of pins have the same dynamic on-chip terminatio
         Info (169066): Type bi-directional pin HPS_DDR3_DQ[21] uses the SSTL-15 Class I I/O standard File: /home/roboy/BikeToRikshaw/acoustic-levitation/Quartus/DE0_Nano_SoC_top_level.vhd Line: 38
 Info (144001): Generated suppressed messages file /home/roboy/BikeToRikshaw/acoustic-levitation/Quartus/output_files/DE0_Nano_SoC.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 514 warnings
-    Info: Peak virtual memory: 3080 megabytes
-    Info: Processing ended: Thu Feb  7 23:39:36 2019
-    Info: Elapsed time: 00:02:05
-    Info: Total CPU time (on all processors): 00:04:09
+    Info: Peak virtual memory: 3104 megabytes
+    Info: Processing ended: Wed Feb 13 13:11:09 2019
+    Info: Elapsed time: 00:02:08
+    Info: Total CPU time (on all processors): 00:04:12
 
 
 +----------------------------+

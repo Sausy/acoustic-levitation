@@ -1,0 +1,7 @@
+/home/roboy/BikeToRikshaw/acoustic-levitation/C/CMakeFiles/install/strip.dir
+/home/roboy/BikeToRikshaw/acoustic-levitation/C/CMakeFiles/rebuild_cache.dir
+/home/roboy/BikeToRikshaw/acoustic-levitation/C/CMakeFiles/accustic_levi.dir
+/home/roboy/BikeToRikshaw/acoustic-levitation/C/CMakeFiles/install.dir
+/home/roboy/BikeToRikshaw/acoustic-levitation/C/CMakeFiles/install/local.dir
+/home/roboy/BikeToRikshaw/acoustic-levitation/C/CMakeFiles/list_install_components.dir
+/home/roboy/BikeToRikshaw/acoustic-levitation/C/CMakeFiles/edit_cache.dir
