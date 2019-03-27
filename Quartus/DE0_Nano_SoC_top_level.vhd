@@ -155,7 +155,8 @@ architecture rtl of DE0_Nano_SoC_top_level is
       piezo_controller_piezo_enable_export : out   std_logic;                                        -- export
       piezo_controller_piezo_out_export    : out   std_logic_vector(88 downto 0);                    -- export
       piezo_controller_piezo_status_export : out   std_logic_vector(2 downto 0);                     -- export
-      reset_reset_n                        : in    std_logic                     := 'X'              -- reset_n
+      reset_reset_n                        : in    std_logic                     := 'X';             -- reset_n
+		clock_divider_0_conduit_end_out_clk  : out   std_logic                                         -- out_clk
     );
   end component soc_system;
 
@@ -167,6 +168,7 @@ architecture rtl of DE0_Nano_SoC_top_level is
   signal ctr             : unsigned(20 downto 0);
   signal GPIO            : std_logic_vector(3 downto 0) := (others => '0');
   signal led_avalon      : std_logic_vector(7 downto 0);
+  signal clk_div			 : std_logic;
 
 begin
 
@@ -253,7 +255,8 @@ begin
     piezo_controller_piezo_out_export(87 downto 0) => PIEZO,
     piezo_controller_piezo_out_export(88)          => piezo_out_0,
     piezo_controller_piezo_enable_export           => piezo_enable,
-    piezo_controller_piezo_status_export           => piezo_status
+    piezo_controller_piezo_status_export           => piezo_status,
+	 clock_divider_0_conduit_end_out_clk  				=> clk_div   --   clock_divider_0_conduit_end.out_clk
   );
 
   ENABLE  <= piezo_enable;

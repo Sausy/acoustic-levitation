@@ -70,6 +70,7 @@
 		.piezo_controller_piezo_enable_export (<connected-to-piezo_controller_piezo_enable_export>), // piezo_controller_piezo_enable.export
 		.piezo_controller_piezo_out_export    (<connected-to-piezo_controller_piezo_out_export>),    //    piezo_controller_piezo_out.export
 		.piezo_controller_piezo_status_export (<connected-to-piezo_controller_piezo_status_export>), // piezo_controller_piezo_status.export
-		.reset_reset_n                        (<connected-to-reset_reset_n>)                         //                         reset.reset_n
+		.reset_reset_n                        (<connected-to-reset_reset_n>),                        //                         reset.reset_n
+		.clock_divider_0_conduit_end_out_clk  (<connected-to-clock_divider_0_conduit_end_out_clk>)   //   clock_divider_0_conduit_end.out_clk
 	);
 

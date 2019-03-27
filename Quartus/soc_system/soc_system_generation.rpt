@@ -4,6 +4,8 @@ Progress: Loading Quartus/soc_system.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 18.0]
 Progress: Parameterizing module clk_0
+Progress: Adding clock_divider_0 [clock_divider 1.0]
+Progress: Parameterizing module clock_divider_0
 Progress: Adding fpga_key [altera_avalon_pio 18.0]
 Progress: Parameterizing module fpga_key
 Progress: Adding fpga_led [altera_avalon_pio 18.0]
@@ -30,6 +32,8 @@ Progress: Loading Quartus/soc_system.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 18.0]
 Progress: Parameterizing module clk_0
+Progress: Adding clock_divider_0 [clock_divider 1.0]
+Progress: Parameterizing module clock_divider_0
 Progress: Adding fpga_key [altera_avalon_pio 18.0]
 Progress: Parameterizing module fpga_key
 Progress: Adding fpga_led [altera_avalon_pio 18.0]
@@ -52,12 +56,13 @@ Warning: hps_0.f2h_irq0: Cannot connect clock for irq_mapper.sender
 Warning: hps_0.f2h_irq0: Cannot connect reset for irq_mapper.sender
 Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
 Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: clock_divider_0: "soc_system" instantiated clock_divider "clock_divider_0"
 Info: fpga_key: Starting RTL generation for module 'soc_system_fpga_key'
-Info: fpga_key:   Generation command is [exec /home/roboy/intelFPGA/18.0/quartus/linux64/perl/bin/perl -I /home/roboy/intelFPGA/18.0/quartus/linux64/perl/lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/europa -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/perl_lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_fpga_key --dir=/tmp/alt7940_3785185624766171971.dir/0002_fpga_key_gen/ --quartus_dir=/home/roboy/intelFPGA/18.0/quartus --verilog --config=/tmp/alt7940_3785185624766171971.dir/0002_fpga_key_gen//soc_system_fpga_key_component_configuration.pl  --do_build_sim=0  ]
+Info: fpga_key:   Generation command is [exec /home/roboy/intelFPGA/18.0/quartus/linux64/perl/bin/perl -I /home/roboy/intelFPGA/18.0/quartus/linux64/perl/lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/europa -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/perl_lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_fpga_key --dir=/tmp/alt7982_3137672800162843759.dir/0004_fpga_key_gen/ --quartus_dir=/home/roboy/intelFPGA/18.0/quartus --verilog --config=/tmp/alt7982_3137672800162843759.dir/0004_fpga_key_gen//soc_system_fpga_key_component_configuration.pl  --do_build_sim=0  ]
 Info: fpga_key: Done RTL generation for module 'soc_system_fpga_key'
 Info: fpga_key: "soc_system" instantiated altera_avalon_pio "fpga_key"
 Info: fpga_led: Starting RTL generation for module 'soc_system_fpga_led'
-Info: fpga_led:   Generation command is [exec /home/roboy/intelFPGA/18.0/quartus/linux64/perl/bin/perl -I /home/roboy/intelFPGA/18.0/quartus/linux64/perl/lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/europa -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/perl_lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_fpga_led --dir=/tmp/alt7940_3785185624766171971.dir/0003_fpga_led_gen/ --quartus_dir=/home/roboy/intelFPGA/18.0/quartus --verilog --config=/tmp/alt7940_3785185624766171971.dir/0003_fpga_led_gen//soc_system_fpga_led_component_configuration.pl  --do_build_sim=0  ]
+Info: fpga_led:   Generation command is [exec /home/roboy/intelFPGA/18.0/quartus/linux64/perl/bin/perl -I /home/roboy/intelFPGA/18.0/quartus/linux64/perl/lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/europa -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/perl_lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_fpga_led --dir=/tmp/alt7982_3137672800162843759.dir/0005_fpga_led_gen/ --quartus_dir=/home/roboy/intelFPGA/18.0/quartus --verilog --config=/tmp/alt7982_3137672800162843759.dir/0005_fpga_led_gen//soc_system_fpga_led_component_configuration.pl  --do_build_sim=0  ]
 Info: fpga_led: Done RTL generation for module 'soc_system_fpga_led'
 Info: fpga_led: "soc_system" instantiated altera_avalon_pio "fpga_led"
 Info: hps_0: "Running  for module: hps_0"
@@ -101,6 +106,6 @@ Info: avalon_st_adapter_002: "mm_interconnect_0" instantiated altera_avalon_st_a
 Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter_002" instantiated error_adapter "error_adapter_0"
-Info: soc_system: Done "soc_system" with 30 modules, 88 files
+Info: soc_system: Done "soc_system" with 31 modules, 89 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

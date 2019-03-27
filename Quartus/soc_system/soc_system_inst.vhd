@@ -71,7 +71,8 @@
 			piezo_controller_piezo_enable_export : out   std_logic;                                        -- export
 			piezo_controller_piezo_out_export    : out   std_logic_vector(88 downto 0);                    -- export
 			piezo_controller_piezo_status_export : out   std_logic_vector(2 downto 0);                     -- export
-			reset_reset_n                        : in    std_logic                     := 'X'              -- reset_n
+			reset_reset_n                        : in    std_logic                     := 'X';             -- reset_n
+			clock_divider_0_conduit_end_out_clk  : out   std_logic                                         -- out_clk
 		);
 	end component soc_system;
 
@@ -148,6 +149,7 @@
 			piezo_controller_piezo_enable_export => CONNECTED_TO_piezo_controller_piezo_enable_export, -- piezo_controller_piezo_enable.export
 			piezo_controller_piezo_out_export    => CONNECTED_TO_piezo_controller_piezo_out_export,    --    piezo_controller_piezo_out.export
 			piezo_controller_piezo_status_export => CONNECTED_TO_piezo_controller_piezo_status_export, -- piezo_controller_piezo_status.export
-			reset_reset_n                        => CONNECTED_TO_reset_reset_n                         --                         reset.reset_n
+			reset_reset_n                        => CONNECTED_TO_reset_reset_n,                        --                         reset.reset_n
+			clock_divider_0_conduit_end_out_clk  => CONNECTED_TO_clock_divider_0_conduit_end_out_clk   --   clock_divider_0_conduit_end.out_clk
 		);
 

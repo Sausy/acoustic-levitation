@@ -71,7 +71,8 @@ module soc_system (
 	piezo_controller_piezo_enable_export,
 	piezo_controller_piezo_out_export,
 	piezo_controller_piezo_status_export,
-	reset_reset_n);	
+	reset_reset_n,
+	clock_divider_0_conduit_end_out_clk);	
 
 	input		clk_clk;
 	input	[1:0]	fpga_key_input_export;
@@ -145,4 +146,5 @@ module soc_system (
 	output	[88:0]	piezo_controller_piezo_out_export;
 	output	[2:0]	piezo_controller_piezo_status_export;
 	input		reset_reset_n;
+	output		clock_divider_0_conduit_end_out_clk;
 endmodule

@@ -56,19 +56,19 @@ preplace inst soc_system.hps_0.f2s_periph_ref_clk -pg 1
 preplace inst soc_system.hps_0.fpga_interfaces -pg 1
 preplace inst soc_system.fpga_led -pg 1 -lvl 3 -y 170
 preplace inst soc_system.hps_0.axi_sdram -pg 1
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)soc_system.reset) 1 0 1 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.piezo_controller_piezo_enable,(SLAVE)piezo_controller_0.piezo_enable) 1 0 3 NJ 300 NJ 300 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.piezo_controller_piezo_status,(SLAVE)piezo_controller_0.piezo_status) 1 0 3 NJ 340 NJ 340 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)fpga_key.external_connection,(SLAVE)soc_system.fpga_key_input) 1 0 3 NJ 180 NJ 170 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)piezo_controller_0.clk,(SLAVE)fpga_led.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(MASTER)clk_0.clk,(SLAVE)fpga_key.clk) 1 1 2 440 220 810
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)fpga_key.reset,(MASTER)clk_0.clk_reset,(MASTER)hps_0.h2f_reset,(SLAVE)fpga_led.reset,(SLAVE)piezo_controller_0.reset) 1 1 2 400 360 830
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)hps_0.f2h_irq0,(SLAVE)fpga_key.irq) 1 2 1 790
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_io,(SLAVE)hps_0.hps_io) 1 0 2 NJ 60 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)fpga_key.clk,(SLAVE)fpga_led.clk,(SLAVE)piezo_controller_0.clk,(MASTER)clk_0.clk,(SLAVE)hps_0.h2f_lw_axi_clock) 1 1 2 440 220 810
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.fpga_led_output,(SLAVE)fpga_led.external_connection) 1 0 3 NJ 200 NJ 200 NJ
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)piezo_controller_0.reset,(MASTER)hps_0.h2f_reset,(SLAVE)fpga_led.reset,(MASTER)clk_0.clk_reset,(SLAVE)fpga_key.reset) 1 1 2 400 360 830
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)clk_0.clk_in,(SLAVE)soc_system.clk) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)fpga_key.irq,(MASTER)hps_0.f2h_irq0) 1 2 1 790
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)fpga_key.s1,(SLAVE)piezo_controller_0.s1,(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)fpga_led.s1) 1 2 1 750
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)piezo_controller_0.piezo_status,(SLAVE)soc_system.piezo_controller_piezo_status) 1 0 3 NJ 340 NJ 340 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_ddr,(SLAVE)hps_0.memory) 1 0 2 NJ 100 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_h2f_loan_io,(SLAVE)hps_0.h2f_loan_io) 1 0 2 NJ 80 NJ
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)piezo_controller_0.s1,(SLAVE)fpga_key.s1,(SLAVE)fpga_led.s1) 1 2 1 750
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)piezo_controller_0.piezo_out,(SLAVE)soc_system.piezo_controller_piezo_out) 1 0 3 NJ 320 NJ 320 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.fpga_key_input,(SLAVE)fpga_key.external_connection) 1 0 3 NJ 180 NJ 170 NJ
 levelinfo -pg 1 0 190 1030
 levelinfo -hier soc_system 200 230 560 870 1020
