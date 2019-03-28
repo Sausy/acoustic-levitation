@@ -1,6 +1,7 @@
 
 module soc_system (
 	clk_clk,
+	clock_divider_0_conduit_end_out_clk,
 	fpga_key_input_export,
 	fpga_led_output_export,
 	hps_ddr_mem_a,
@@ -71,10 +72,11 @@ module soc_system (
 	piezo_controller_piezo_enable_export,
 	piezo_controller_piezo_out_export,
 	piezo_controller_piezo_status_export,
-	reset_reset_n,
-	clock_divider_0_conduit_end_out_clk);	
+	rtc_0_conduit_end_event_trigger,
+	reset_reset_n);	
 
 	input		clk_clk;
+	output		clock_divider_0_conduit_end_out_clk;
 	input	[1:0]	fpga_key_input_export;
 	output	[7:0]	fpga_led_output_export;
 	output	[14:0]	hps_ddr_mem_a;
@@ -145,6 +147,6 @@ module soc_system (
 	output		piezo_controller_piezo_enable_export;
 	output	[88:0]	piezo_controller_piezo_out_export;
 	output	[2:0]	piezo_controller_piezo_status_export;
+	input		rtc_0_conduit_end_event_trigger;
 	input		reset_reset_n;
-	output		clock_divider_0_conduit_end_out_clk;
 endmodule

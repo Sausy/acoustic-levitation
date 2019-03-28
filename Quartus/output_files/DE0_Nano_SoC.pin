@@ -106,7 +106,7 @@ HPS_DDR3_BA[0]               : A27       : output : SSTL-15 Class I   :         
 GND                          : AA1       : gnd    :                   :         :           :                
 GND                          : AA2       : gnd    :                   :         :           :                
 GND                          : AA3       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA4       :        :                   :         : 3A        :                
+PIEZO[80]                    : AA4       : output : 3.3-V LVTTL       :         : 3A        : N              
 VCCIO3A                      : AA5       : power  :                   : 3.3V    : 3A        :                
 nCSO, DATA4                  : AA6       :        :                   :         : 3A        :                
 DCLK                         : AA8       :        :                   :         : 3A        :                
@@ -264,7 +264,7 @@ PIEZO[15]                    : AG20      : output : 3.3-V LVTTL       :         
 PIEZO[1]                     : AG21      : output : 3.3-V LVTTL       :         : 4A        : Y              
 VCCIO4A                      : AG22      : power  :                   : 3.3V    : 4A        :                
 PIEZO[83]                    : AG23      : output : 3.3-V LVTTL       :         : 4A        : Y              
-PIEZO[80]                    : AG24      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RTC_TRIGGER                  : AG24      : input  : 2.5 V             :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4A        :                
 PIEZO[11]                    : AG26      : output : 3.3-V LVTTL       :         : 4A        : Y              
 GND                          : AG27      : gnd    :                   :         :           :                

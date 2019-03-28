@@ -37,7 +37,7 @@
    {
       datum baseAddress
       {
-         value = "544";
+         value = "262688";
          type = "String";
       }
    }
@@ -53,7 +53,7 @@
    {
       datum baseAddress
       {
-         value = "512";
+         value = "262656";
          type = "String";
       }
    }
@@ -77,7 +77,55 @@
    {
       datum baseAddress
       {
+         value = "262144";
+         type = "String";
+      }
+   }
+   element realtime_clock_controll_0
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element realtime_clock_controll_0.avalon_slave
+   {
+      datum baseAddress
+      {
          value = "0";
+         type = "String";
+      }
+   }
+   element soc_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element soc_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element soc_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element soc_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
          type = "String";
       }
    }
@@ -181,6 +229,11 @@
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <interface
+   name="rtc_0_conduit_end"
+   internal="realtime_clock_controll_0.conduit_end"
+   type="conduit"
+   dir="end" />
  <module name="clk_0" kind="clock_source" version="18.0" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -754,13 +807,30 @@
   <parameter name="clock_rate" value="50000000" />
   <parameter name="piezo_count" value="89" />
  </module>
+ <module
+   name="realtime_clock_controll_0"
+   kind="realtime_clock_controll"
+   version="1.0"
+   enabled="1">
+  <parameter name="CLOCK_SPEED_HZ" value="50000000" />
+  <parameter name="RTC_RESOLUTION" value="100" />
+ </module>
+ <connection
+   kind="avalon"
+   version="18.0"
+   start="hps_0.h2f_lw_axi_master"
+   end="realtime_clock_controll_0.avalon_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <connection
    kind="avalon"
    version="18.0"
    start="hps_0.h2f_lw_axi_master"
    end="fpga_key.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0220" />
+  <parameter name="baseAddress" value="0x00040220" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -769,7 +839,7 @@
    start="hps_0.h2f_lw_axi_master"
    end="fpga_led.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0200" />
+  <parameter name="baseAddress" value="0x00040200" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -778,7 +848,7 @@
    start="hps_0.h2f_lw_axi_master"
    end="piezo_controller_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="baseAddress" value="0x00040000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="clock" version="18.0" start="clk_0.clk" end="fpga_key.clk" />
@@ -793,6 +863,11 @@
    version="18.0"
    start="clk_0.clk"
    end="clock_divider_0.clock_sink" />
+ <connection
+   kind="clock"
+   version="18.0"
+   start="clk_0.clk"
+   end="realtime_clock_controll_0.clock_sink" />
  <connection
    kind="clock"
    version="18.0"
@@ -825,6 +900,11 @@
    version="18.0"
    start="clk_0.clk_reset"
    end="clock_divider_0.reset" />
+ <connection
+   kind="reset"
+   version="18.0"
+   start="clk_0.clk_reset"
+   end="realtime_clock_controll_0.reset" />
  <connection
    kind="reset"
    version="18.0"

@@ -1,6 +1,3 @@
 (sym_lib_table
   (lib (name acoustic_levitation_main-rescue)(type Legacy)(uri ${KIPRJMOD}/acoustic_levitation_main-rescue.lib)(options "")(descr ""))
-  (lib (name power1)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/power.lib)(options "")(descr ""))
-  (lib (name 74xx1)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/74xx.lib)(options "")(descr ""))
-  (lib (name library)(type Legacy)(uri ${KIPRJMOD}/library.lib)(options "")(descr ""))
 )

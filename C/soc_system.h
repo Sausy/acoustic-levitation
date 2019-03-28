@@ -20,15 +20,26 @@
  */
 
 /*
+ * Macros for device 'realtime_clock_controll_0', class 'realtime_clock_controll'
+ * The macros are prefixed with 'REALTIME_CLOCK_CONTROLL_0_'.
+ * The prefix is the slave descriptor.
+ */
+#define REALTIME_CLOCK_CONTROLL_0_COMPONENT_TYPE realtime_clock_controll
+#define REALTIME_CLOCK_CONTROLL_0_COMPONENT_NAME realtime_clock_controll_0
+#define REALTIME_CLOCK_CONTROLL_0_BASE 0x0
+#define REALTIME_CLOCK_CONTROLL_0_SPAN 262144
+#define REALTIME_CLOCK_CONTROLL_0_END 0x3ffff
+
+/*
  * Macros for device 'piezo_controller_0', class 'piezo_controller'
  * The macros are prefixed with 'PIEZO_CONTROLLER_0_'.
  * The prefix is the slave descriptor.
  */
 #define PIEZO_CONTROLLER_0_COMPONENT_TYPE piezo_controller
 #define PIEZO_CONTROLLER_0_COMPONENT_NAME piezo_controller_0
-#define PIEZO_CONTROLLER_0_BASE 0x0
+#define PIEZO_CONTROLLER_0_BASE 0x40000
 #define PIEZO_CONTROLLER_0_SPAN 512
-#define PIEZO_CONTROLLER_0_END 0x1ff
+#define PIEZO_CONTROLLER_0_END 0x401ff
 #define PIEZO_CONTROLLER_0_ENABLE_REG_OFST 0x0
 #define PIEZO_CONTROLLER_0_FREQ 50000000
 #define PIEZO_CONTROLLER_0_PERIOD_REG_OFST 0x2
@@ -45,9 +56,9 @@
  */
 #define FPGA_LED_COMPONENT_TYPE altera_avalon_pio
 #define FPGA_LED_COMPONENT_NAME fpga_led
-#define FPGA_LED_BASE 0x200
+#define FPGA_LED_BASE 0x40200
 #define FPGA_LED_SPAN 32
-#define FPGA_LED_END 0x21f
+#define FPGA_LED_END 0x4021f
 #define FPGA_LED_BIT_CLEARING_EDGE_REGISTER 0
 #define FPGA_LED_BIT_MODIFYING_OUTPUT_REGISTER 1
 #define FPGA_LED_CAPTURE 0
@@ -69,9 +80,9 @@
  */
 #define FPGA_KEY_COMPONENT_TYPE altera_avalon_pio
 #define FPGA_KEY_COMPONENT_NAME fpga_key
-#define FPGA_KEY_BASE 0x220
+#define FPGA_KEY_BASE 0x40220
 #define FPGA_KEY_SPAN 16
-#define FPGA_KEY_END 0x22f
+#define FPGA_KEY_END 0x4022f
 #define FPGA_KEY_IRQ 0
 #define FPGA_KEY_BIT_CLEARING_EDGE_REGISTER 1
 #define FPGA_KEY_BIT_MODIFYING_OUTPUT_REGISTER 0

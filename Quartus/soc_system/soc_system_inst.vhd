@@ -1,6 +1,7 @@
 	component soc_system is
 		port (
 			clk_clk                              : in    std_logic                     := 'X';             -- clk
+			clock_divider_0_conduit_end_out_clk  : out   std_logic;                                        -- out_clk
 			fpga_key_input_export                : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
 			fpga_led_output_export               : out   std_logic_vector(7 downto 0);                     -- export
 			hps_ddr_mem_a                        : out   std_logic_vector(14 downto 0);                    -- mem_a
@@ -71,14 +72,15 @@
 			piezo_controller_piezo_enable_export : out   std_logic;                                        -- export
 			piezo_controller_piezo_out_export    : out   std_logic_vector(88 downto 0);                    -- export
 			piezo_controller_piezo_status_export : out   std_logic_vector(2 downto 0);                     -- export
-			reset_reset_n                        : in    std_logic                     := 'X';             -- reset_n
-			clock_divider_0_conduit_end_out_clk  : out   std_logic                                         -- out_clk
+			rtc_0_conduit_end_event_trigger      : in    std_logic                     := 'X';             -- event_trigger
+			reset_reset_n                        : in    std_logic                     := 'X'              -- reset_n
 		);
 	end component soc_system;
 
 	u0 : component soc_system
 		port map (
 			clk_clk                              => CONNECTED_TO_clk_clk,                              --                           clk.clk
+			clock_divider_0_conduit_end_out_clk  => CONNECTED_TO_clock_divider_0_conduit_end_out_clk,  --   clock_divider_0_conduit_end.out_clk
 			fpga_key_input_export                => CONNECTED_TO_fpga_key_input_export,                --                fpga_key_input.export
 			fpga_led_output_export               => CONNECTED_TO_fpga_led_output_export,               --               fpga_led_output.export
 			hps_ddr_mem_a                        => CONNECTED_TO_hps_ddr_mem_a,                        --                       hps_ddr.mem_a
@@ -149,7 +151,7 @@
 			piezo_controller_piezo_enable_export => CONNECTED_TO_piezo_controller_piezo_enable_export, -- piezo_controller_piezo_enable.export
 			piezo_controller_piezo_out_export    => CONNECTED_TO_piezo_controller_piezo_out_export,    --    piezo_controller_piezo_out.export
 			piezo_controller_piezo_status_export => CONNECTED_TO_piezo_controller_piezo_status_export, -- piezo_controller_piezo_status.export
-			reset_reset_n                        => CONNECTED_TO_reset_reset_n,                        --                         reset.reset_n
-			clock_divider_0_conduit_end_out_clk  => CONNECTED_TO_clock_divider_0_conduit_end_out_clk   --   clock_divider_0_conduit_end.out_clk
+			rtc_0_conduit_end_event_trigger      => CONNECTED_TO_rtc_0_conduit_end_event_trigger,      --             rtc_0_conduit_end.event_trigger
+			reset_reset_n                        => CONNECTED_TO_reset_reset_n                         --                         reset.reset_n
 		);
 

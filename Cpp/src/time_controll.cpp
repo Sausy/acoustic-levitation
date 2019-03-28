@@ -1,0 +1,24 @@
+#include <time_controll.hpp>
+#include <stdio.h>
+
+rtc_ctl::rtc_ctl(int32_t *base_addr_){
+  rtc_base=base_addr_;
+}
+
+uint32_t rtc_ctl::read_time(void) {
+    return (IORD(rtc_base, (uint32_t)(0x00<<8|0)));
+}
+uint32_t rtc_ctl::read_trigger_time(void) {
+    return (IORD(rtc_base, (uint32_t)(0x01<<8|0)));
+}
+
+void rtc_ctl::set_time(uint32_t time_data) {
+    IOWR(rtc_base, (uint32_t)(0x00<<8|0), time_data);
+}
+
+void rtc_ctl::start_US_out() {
+    IOWR(rtc_base, (uint32_t)(0x03<<8|0), 1);
+}
+void rtc_ctl::stop_US_out() {
+    IOWR(rtc_base, (uint32_t)(0x03<<8|0), 0);
+}

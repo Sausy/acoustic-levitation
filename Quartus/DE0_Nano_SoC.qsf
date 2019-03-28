@@ -770,8 +770,6 @@ set_location_assignment PIN_AH26 -to GPIO_1[14]
 set_location_assignment PIN_AH26 -to GPIO_1_14
 set_location_assignment PIN_AA19 -to GPIO_1[15]
 set_location_assignment PIN_AA19 -to GPIO_1_15
-set_location_assignment PIN_AG24 -to GPIO_1[16]
-set_location_assignment PIN_AG24 -to GPIO_1_16
 set_location_assignment PIN_AF25 -to GPIO_1[17]
 set_location_assignment PIN_AF25 -to GPIO_1_17
 set_location_assignment PIN_AH23 -to GPIO_1[18]
@@ -1040,8 +1038,6 @@ set_location_assignment PIN_AH26 -to PIEZO[78]
 set_location_assignment PIN_AH26 -to PIEZO_78
 set_location_assignment PIN_AA19 -to PIEZO[79]
 set_location_assignment PIN_AA19 -to PIEZO_79
-set_location_assignment PIN_AG24 -to PIEZO[80]
-set_location_assignment PIN_AG24 -to PIEZO_80
 set_location_assignment PIN_AF25 -to PIEZO[81]
 set_location_assignment PIN_AF25 -to PIEZO_81
 set_location_assignment PIN_AH23 -to PIEZO[82]
@@ -1464,7 +1460,8 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
-set_global_assignment -name VHDL_FILE DE0_Nano_SoC_top_level.vhd
 set_global_assignment -name PROJECT_IP_REGENERATION_POLICY ALWAYS_REGENERATE_IP
 set_global_assignment -name VERILOG_FILE ../Verilog/clock_divider.v
+set_global_assignment -name VERILOG_FILE ../Verilog/realtime_clock_controll.v
+set_location_assignment PIN_AG24 -to RTC_TRIGGER
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -32,7 +32,10 @@ entity piezo_controller is
     -- Output signals
     piezo_out     : out std_logic_vector(piezo_count-1 downto 0);
     piezo_enable  : out std_logic;
-    piezo_status  : out std_logic_vector(2 downto 0)
+    piezo_status  : out std_logic_vector(2 downto 0);
+	 
+	 -- Input signals
+	 piezo_enable_in : in std_logic 							:= '0'
 
   );
 

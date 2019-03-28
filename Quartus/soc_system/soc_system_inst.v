@@ -1,5 +1,6 @@
 	soc_system u0 (
 		.clk_clk                              (<connected-to-clk_clk>),                              //                           clk.clk
+		.clock_divider_0_conduit_end_out_clk  (<connected-to-clock_divider_0_conduit_end_out_clk>),  //   clock_divider_0_conduit_end.out_clk
 		.fpga_key_input_export                (<connected-to-fpga_key_input_export>),                //                fpga_key_input.export
 		.fpga_led_output_export               (<connected-to-fpga_led_output_export>),               //               fpga_led_output.export
 		.hps_ddr_mem_a                        (<connected-to-hps_ddr_mem_a>),                        //                       hps_ddr.mem_a
@@ -70,7 +71,7 @@
 		.piezo_controller_piezo_enable_export (<connected-to-piezo_controller_piezo_enable_export>), // piezo_controller_piezo_enable.export
 		.piezo_controller_piezo_out_export    (<connected-to-piezo_controller_piezo_out_export>),    //    piezo_controller_piezo_out.export
 		.piezo_controller_piezo_status_export (<connected-to-piezo_controller_piezo_status_export>), // piezo_controller_piezo_status.export
-		.reset_reset_n                        (<connected-to-reset_reset_n>),                        //                         reset.reset_n
-		.clock_divider_0_conduit_end_out_clk  (<connected-to-clock_divider_0_conduit_end_out_clk>)   //   clock_divider_0_conduit_end.out_clk
+		.rtc_0_conduit_end_event_trigger      (<connected-to-rtc_0_conduit_end_event_trigger>),      //             rtc_0_conduit_end.event_trigger
+		.reset_reset_n                        (<connected-to-reset_reset_n>)                         //                         reset.reset_n
 	);
 
