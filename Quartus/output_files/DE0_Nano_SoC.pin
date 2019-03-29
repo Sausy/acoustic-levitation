@@ -106,7 +106,7 @@ HPS_DDR3_BA[0]               : A27       : output : SSTL-15 Class I   :         
 GND                          : AA1       : gnd    :                   :         :           :                
 GND                          : AA2       : gnd    :                   :         :           :                
 GND                          : AA3       : gnd    :                   :         :           :                
-PIEZO[80]                    : AA4       : output : 3.3-V LVTTL       :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA4       :        :                   :         : 3A        :                
 VCCIO3A                      : AA5       : power  :                   : 3.3V    : 3A        :                
 nCSO, DATA4                  : AA6       :        :                   :         : 3A        :                
 DCLK                         : AA8       :        :                   :         : 3A        :                
@@ -119,8 +119,8 @@ VCCPD3B4A                    : AA14      : power  :                   : 3.3V    
 PIEZO[18]                    : AA15      : output : 3.3-V LVTTL       :         : 4A        : Y              
 VCCIO4A                      : AA16      : power  :                   : 3.3V    : 4A        :                
 GND                          : AA17      : gnd    :                   :         :           :                
-PIEZO[64]                    : AA18      : output : 3.3-V LVTTL       :         : 4A        : Y              
-PIEZO[79]                    : AA19      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA18      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :         : 5A        :                
 VCCA_FPLL                    : AA21      : power  :                   : 2.5V    :           :                
 LED[7]                       : AA23      : output : 3.3-V LVTTL       :         : 5A        : Y              
@@ -132,7 +132,7 @@ HPS_DDR3_DQ[26]              : AA28      : bidir  : SSTL-15 Class I   :         
 GND                          : AB1       : gnd    :                   :         :           :                
 GND                          : AB2       : gnd    :                   :         :           :                
 GND                          : AB3       : gnd    :                   :         :           :                
-PIEZO[73]                    : AB4       : output : 3.3-V LVTTL       :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :         : 3A        :                
 TCK                          : AB5       : input  :                   :         : 3A        :                
 AS_DATA3, DATA3              : AB6       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB23      :        :                   :         : 5A        :                
@@ -150,9 +150,9 @@ AS_DATA1, DATA1              : AC6       :        :                   :         
 TMS                          : AC7       : input  :                   :         : 3A        :                
 VCC_AUX                      : AC8       : power  :                   : 2.5V    :           :                
 VCC_AUX                      : AC21      : power  :                   : 2.5V    :           :                
-PIEZO[63]                    : AC22      : output : 3.3-V LVTTL       :         : 4A        : Y              
-PIEZO[76]                    : AC23      : output : 3.3-V LVTTL       :         : 4A        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC24      :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC22      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC23      :        :                   :         : 4A        :                
+RTC_TRIGGER2                 : AC24      : input  : 2.5 V             :         : 5A        : Y              
 VCCIO5A                      : AC25      : power  :                   : 3.3V    : 5A        :                
 VREFB5AN0                    : AC26      : power  :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC27      :        :                   :         : 6B        :                
@@ -175,11 +175,11 @@ VCC_AUX                      : AD15      : power  :                   : 2.5V    
 VCCPD3B4A                    : AD16      : power  :                   : 3.3V    : 3B, 4A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD17      :        :                   :         : 4A        :                
 VCCPD3B4A                    : AD18      : power  :                   : 3.3V    : 3B, 4A    :                
-PIEZO[86]                    : AD19      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD19      :        :                   :         : 4A        :                
 PIEZO[2]                     : AD20      : output : 3.3-V LVTTL       :         : 4A        : Y              
 VCCPD3B4A                    : AD21      : power  :                   : 3.3V    : 3B, 4A    :                
 GND                          : AD22      : gnd    :                   :         :           :                
-PIEZO[66]                    : AD23      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD23      :        :                   :         : 4A        :                
 VCCPGM                       : AD24      : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 GND                          : AD25      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD26      :        :                   :         : 5A        :                
@@ -191,7 +191,7 @@ GND                          : AE3       : gnd    :                   :         
 PIEZO[59]                    : AE4       : output : 3.3-V LVTTL       :         : 3B        : Y              
 VREFB3AN0                    : AE5       : power  :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE6       :        :                   :         : 3A        :                
-PIEZO[62]                    : AE7       : output : 3.3-V LVTTL       :         : 3B        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE7       :        :                   :         : 3B        :                
 PIEZO[45]                    : AE8       : output : 3.3-V LVTTL       :         : 3B        : Y              
 PIEZO[43]                    : AE9       : output : 3.3-V LVTTL       :         : 3B        : Y              
 VCCIO3B                      : AE10      : power  :                   : 3.3V    : 3B        :                
@@ -203,12 +203,12 @@ PIEZO[28]                    : AE15      : output : 3.3-V LVTTL       :         
 GND                          : AE16      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE17      :        :                   :         : 4A        :                
 GND                          : AE18      : gnd    :                   :         :           :                
-PIEZO[84]                    : AE19      : output : 3.3-V LVTTL       :         : 4A        : Y              
-PIEZO[87]                    : AE20      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE19      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE20      :        :                   :         : 4A        :                
 VCCIO4A                      : AE21      : power  :                   : 3.3V    : 4A        :                
 PIEZO[10]                    : AE22      : output : 3.3-V LVTTL       :         : 4A        : Y              
-PIEZO[65]                    : AE23      : output : 3.3-V LVTTL       :         : 4A        : Y              
-PIEZO[88]                    : AE24      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE23      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE24      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE25      :        :                   :         : 5A        :                
 LED[5]                       : AE26      : output : 3.3-V LVTTL       :         : 5A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE27      :        :                   :         : 6B        :                
@@ -219,8 +219,8 @@ GND                          : AF3       : gnd    :                   :         
 PIEZO[56]                    : AF4       : output : 3.3-V LVTTL       :         : 3B        : Y              
 PIEZO[58]                    : AF5       : output : 3.3-V LVTTL       :         : 3B        : Y              
 PIEZO[47]                    : AF6       : output : 3.3-V LVTTL       :         : 3B        : Y              
-PIEZO[69]                    : AF7       : output : 3.3-V LVTTL       :         : 3B        : Y              
-PIEZO[71]                    : AF8       : output : 3.3-V LVTTL       :         : 3B        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF7       :        :                   :         : 3B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF8       :        :                   :         : 3B        :                
 PIEZO[46]                    : AF9       : output : 3.3-V LVTTL       :         : 3B        : Y              
 PIEZO[41]                    : AF10      : output : 3.3-V LVTTL       :         : 3B        : Y              
 PIEZO[38]                    : AF11      : output : 3.3-V LVTTL       :         : 3B        : Y              
@@ -230,14 +230,14 @@ VCCIO4A                      : AF14      : power  :                   : 3.3V    
 PIEZO[22]                    : AF15      : output : 3.3-V LVTTL       :         : 4A        : Y              
 VREFB4AN0                    : AF16      : power  :                   :         : 4A        :                
 PIEZO[34]                    : AF17      : output : 3.3-V LVTTL       :         : 4A        : Y              
-PIEZO[85]                    : AF18      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF18      :        :                   :         : 4A        :                
 VCCIO4A                      : AF19      : power  :                   : 3.3V    : 4A        :                
 PIEZO[3]                     : AF20      : output : 3.3-V LVTTL       :         : 4A        : Y              
 PIEZO[16]                    : AF21      : output : 3.3-V LVTTL       :         : 4A        : Y              
 PIEZO[8]                     : AF22      : output : 3.3-V LVTTL       :         : 4A        : Y              
 PIEZO[4]                     : AF23      : output : 3.3-V LVTTL       :         : 4A        : Y              
 GND                          : AF24      : gnd    :                   :         :           :                
-PIEZO[81]                    : AF25      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF25      :        :                   :         : 4A        :                
 LED[4]                       : AF26      : output : 3.3-V LVTTL       :         : 5A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF27      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF28      :        :                   :         : 4A        :                
@@ -258,12 +258,12 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AG14      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG15      :        :                   :         : 4A        :                
 PIEZO[21]                    : AG16      : output : 3.3-V LVTTL       :         : 4A        : Y              
 GND                          : AG17      : gnd    :                   :         :           :                
-PIEZO[77]                    : AG18      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG18      :        :                   :         : 4A        :                
 PIEZO[9]                     : AG19      : output : 3.3-V LVTTL       :         : 4A        : Y              
 PIEZO[15]                    : AG20      : output : 3.3-V LVTTL       :         : 4A        : Y              
 PIEZO[1]                     : AG21      : output : 3.3-V LVTTL       :         : 4A        : Y              
 VCCIO4A                      : AG22      : power  :                   : 3.3V    : 4A        :                
-PIEZO[83]                    : AG23      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG23      :        :                   :         : 4A        :                
 RTC_TRIGGER                  : AG24      : input  : 2.5 V             :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4A        :                
 PIEZO[11]                    : AG26      : output : 3.3-V LVTTL       :         : 4A        : Y              
@@ -285,15 +285,15 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AH14      :        :                   :      
 VCCIO4A                      : AH15      : power  :                   : 3.3V    : 4A        :                
 KEY_N[1]                     : AH16      : input  : 3.3-V LVTTL       :         : 4A        : Y              
 KEY_N[0]                     : AH17      : input  : 3.3-V LVTTL       :         : 4A        : Y              
-PIEZO[67]                    : AH18      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH18      :        :                   :         : 4A        :                
 PIEZO[13]                    : AH19      : output : 3.3-V LVTTL       :         : 4A        : Y              
 GND                          : AH20      : gnd    :                   :         :           :                
 PIEZO[7]                     : AH21      : output : 3.3-V LVTTL       :         : 4A        : Y              
 PIEZO[14]                    : AH22      : output : 3.3-V LVTTL       :         : 4A        : Y              
-PIEZO[82]                    : AH23      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH23      :        :                   :         : 4A        :                
 PIEZO[5]                     : AH24      : output : 3.3-V LVTTL       :         : 4A        : Y              
 VCCIO4A                      : AH25      : power  :                   : 3.3V    : 4A        :                
-PIEZO[78]                    : AH26      : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH26      :        :                   :         : 4A        :                
 PIEZO[17]                    : AH27      : output : 3.3-V LVTTL       :         : 4A        : Y              
 GND                          : B1        :        :                   :         :           :                
 DNU                          : B2        :        :                   :         :           :                
@@ -637,7 +637,7 @@ VCC                          : T5        : power  :                   : 1.1V    
 PIEZO[27]                    : T8        : output : 3.3-V LVTTL       :         : 3A        : Y              
 VCC                          : T9        : power  :                   : 1.1V    :           :                
 GND                          : T10       : gnd    :                   :         :           :                
-PIEZO[61]                    : T11       : output : 3.3-V LVTTL       :         : 3B        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T11       :        :                   :         : 3B        :                
 PIEZO[33]                    : T12       : output : 3.3-V LVTTL       :         : 3B        : Y              
 PIEZO[60]                    : T13       : output : 3.3-V LVTTL       :         : 3B        : Y              
 GND                          : T14       : gnd    :                   :         :           :                
@@ -686,7 +686,7 @@ GND                          : V8        : gnd    :                   :         
 GND                          : V9        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V10       :        :                   :         : 3A        :                
 FPGA_CLK1_50                 : V11       : input  : 3.3-V LVTTL       :         : 3B        : Y              
-PIEZO[68]                    : V12       : output : 3.3-V LVTTL       :         : 3B        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V12       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 4A        :                
 GND                          : V14       : gnd    :                   :         :           :                
 LED[3]                       : V15       : output : 3.3-V LVTTL       :         : 5A        : Y              
@@ -706,11 +706,11 @@ GND                          : W2        : gnd    :                   :         
 GND                          : W3        : gnd    :                   :         :           :                
 GND                          : W4        : gnd    :                   :         :           :                
 VCCA_FPLL                    : W5        : power  :                   : 2.5V    :           :                
-PIEZO[74]                    : W8        : output : 3.3-V LVTTL       :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 3A        :                
 VCCIO3A                      : W9        : power  :                   : 3.3V    : 3A        :                
 TDI                          : W10       : input  :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W11       :        :                   :         : 3B        :                
-PIEZO[70]                    : W12       : output : 3.3-V LVTTL       :         : 3B        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W12       :        :                   :         : 3B        :                
 VCCIO4A                      : W13       : power  :                   : 3.3V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W14       :        :                   :         : 4A        :                
 LED[0]                       : W15       : output : 3.3-V LVTTL       :         : 5A        : Y              
@@ -728,9 +728,9 @@ HPS_DDR3_DM[2]               : W28       : output : SSTL-15 Class I   :         
 DNU                          : Y1        :        :                   :         :           :                
 DNU                          : Y2        :        :                   :         :           :                
 GND                          : Y3        : gnd    :                   :         :           :                
-PIEZO[75]                    : Y4        : output : 3.3-V LVTTL       :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 3A        :                
 PIEZO[20]                    : Y5        : output : 3.3-V LVTTL       :         : 3A        : Y              
-PIEZO[72]                    : Y8        : output : 3.3-V LVTTL       :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y8        :        :                   :         : 3A        :                
 TDO                          : Y9        : output :                   :         : 3A        :                
 VCCPGM                       : Y10       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y11       :        :                   :         : 3A        :                

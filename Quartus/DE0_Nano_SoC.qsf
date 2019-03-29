@@ -1000,60 +1000,6 @@ set_location_assignment PIN_AE4 -to PIEZO[59]
 set_location_assignment PIN_AE4 -to PIEZO_59
 set_location_assignment PIN_T13 -to PIEZO[60]
 set_location_assignment PIN_T13 -to PIEZO_60
-set_location_assignment PIN_T11 -to PIEZO[61]
-set_location_assignment PIN_T11 -to PIEZO_61
-set_location_assignment PIN_AE7 -to PIEZO[62]
-set_location_assignment PIN_AE7 -to PIEZO_62
-set_location_assignment PIN_AC22 -to PIEZO[63]
-set_location_assignment PIN_AC22 -to PIEZO_63
-set_location_assignment PIN_AA18 -to PIEZO[64]
-set_location_assignment PIN_AA18 -to PIEZO_64
-set_location_assignment PIN_AE23 -to PIEZO[65]
-set_location_assignment PIN_AE23 -to PIEZO_65
-set_location_assignment PIN_AD23 -to PIEZO[66]
-set_location_assignment PIN_AD23 -to PIEZO_66
-set_location_assignment PIN_AH18 -to PIEZO[67]
-set_location_assignment PIN_AH18 -to PIEZO_67
-set_location_assignment PIN_V12 -to PIEZO[68]
-set_location_assignment PIN_V12 -to PIEZO_68
-set_location_assignment PIN_AF7 -to PIEZO[69]
-set_location_assignment PIN_AF7 -to PIEZO_69
-set_location_assignment PIN_W12 -to PIEZO[70]
-set_location_assignment PIN_W12 -to PIEZO_70
-set_location_assignment PIN_AF8 -to PIEZO[71]
-set_location_assignment PIN_AF8 -to PIEZO_71
-set_location_assignment PIN_Y8 -to PIEZO[72]
-set_location_assignment PIN_Y8 -to PIEZO_72
-set_location_assignment PIN_AB4 -to PIEZO[73]
-set_location_assignment PIN_AB4 -to PIEZO_73
-set_location_assignment PIN_W8 -to PIEZO[74]
-set_location_assignment PIN_W8 -to PIEZO_74
-set_location_assignment PIN_Y4 -to PIEZO[75]
-set_location_assignment PIN_Y4 -to PIEZO_75
-set_location_assignment PIN_AC23 -to PIEZO[76]
-set_location_assignment PIN_AC23 -to PIEZO_76
-set_location_assignment PIN_AG18 -to PIEZO[77]
-set_location_assignment PIN_AG18 -to PIEZO_77
-set_location_assignment PIN_AH26 -to PIEZO[78]
-set_location_assignment PIN_AH26 -to PIEZO_78
-set_location_assignment PIN_AA19 -to PIEZO[79]
-set_location_assignment PIN_AA19 -to PIEZO_79
-set_location_assignment PIN_AF25 -to PIEZO[81]
-set_location_assignment PIN_AF25 -to PIEZO_81
-set_location_assignment PIN_AH23 -to PIEZO[82]
-set_location_assignment PIN_AH23 -to PIEZO_82
-set_location_assignment PIN_AG23 -to PIEZO[83]
-set_location_assignment PIN_AG23 -to PIEZO_83
-set_location_assignment PIN_AE19 -to PIEZO[84]
-set_location_assignment PIN_AE19 -to PIEZO_84
-set_location_assignment PIN_AF18 -to PIEZO[85]
-set_location_assignment PIN_AF18 -to PIEZO_85
-set_location_assignment PIN_AD19 -to PIEZO[86]
-set_location_assignment PIN_AD19 -to PIEZO_86
-set_location_assignment PIN_AE20 -to PIEZO[87]
-set_location_assignment PIN_AE20 -to PIEZO_87
-set_location_assignment PIN_AE24 -to PIEZO[88]
-set_location_assignment PIN_AE24 -to PIEZO_88
 set_location_assignment PIN_AH7 -to ENABLE
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_1
@@ -1175,62 +1121,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[59]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_59
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[60]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_60
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[61]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_61
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[62]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_62
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[63]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_63
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[64]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_64
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[65]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_65
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[66]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_66
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[67]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_67
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[68]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_68
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[69]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_69
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[70]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_70
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[71]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_71
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[72]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_72
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[73]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_73
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[74]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_74
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[75]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_75
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[76]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_76
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[77]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_77
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[78]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_78
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[79]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_79
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[80]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_80
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[81]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_81
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[82]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_82
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[83]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_83
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[84]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_84
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[85]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_85
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[86]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_86
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[87]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_87
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO[88]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PIEZO_88
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ENABLE
 set_location_assignment PIN_B19 -to HPS_LTC_GPIO[0]
 set_location_assignment PIN_B19 -to HPS_LTC_GPIO_0
@@ -1464,4 +1354,5 @@ set_global_assignment -name PROJECT_IP_REGENERATION_POLICY ALWAYS_REGENERATE_IP
 set_global_assignment -name VERILOG_FILE ../Verilog/clock_divider.v
 set_global_assignment -name VERILOG_FILE ../Verilog/realtime_clock_controll.v
 set_location_assignment PIN_AG24 -to RTC_TRIGGER
+set_location_assignment PIN_AC24 -to RTC_TRIGGER2
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

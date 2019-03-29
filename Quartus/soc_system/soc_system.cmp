@@ -71,10 +71,12 @@
 			hps_io_hps_io_gpio_inst_LOANIO65              : inout std_logic                     := 'X';             -- hps_io_gpio_inst_LOANIO65
 			piezo_controller_piezo_enable_export          : out   std_logic;                                        -- export
 			piezo_controller_piezo_enable_piezo_enable_in : in    std_logic                     := 'X';             -- piezo_enable_in
-			piezo_controller_piezo_out_export             : out   std_logic_vector(88 downto 0);                    -- export
+			piezo_controller_piezo_out_export             : out   std_logic_vector(60 downto 0);                    -- export
 			piezo_controller_piezo_status_export          : out   std_logic_vector(2 downto 0);                     -- export
 			reset_reset_n                                 : in    std_logic                     := 'X';             -- reset_n
-			rtc_0_conduit_end_event_trigger               : in    std_logic                     := 'X'              -- event_trigger
+			rtc_0_conduit_end_event_trigger               : in    std_logic                     := 'X';             -- event_trigger
+			rtc_0_conduit_end_piezo_enable                : out   std_logic;                                        -- piezo_enable
+			rtc_0_conduit_end_event_trigger2              : in    std_logic                     := 'X'              -- event_trigger2
 		);
 	end component soc_system;
 

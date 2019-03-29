@@ -69,11 +69,12 @@ entity DE0_Nano_SoC_top_level is
     HPS_USB_STP      : out   std_logic;
 
     -- Piezo
-    PIEZO  : out std_logic_vector(88 downto 1);
+    PIEZO  : out std_logic_vector(60 downto 1);
     ENABLE : out std_logic;
 	 
 	 -- rtc trigger
-    RTC_TRIGGER  : in std_logic;
+    RTC_TRIGGER  : in std_logic := '0';
+	 RTC_TRIGGER2 : in std_logic := '0';
 
     -- GPIO on LTC connector
     HPS_LTC_GPIO          : inout std_logic_vector(3 downto 0);
@@ -155,12 +156,15 @@ architecture rtl of DE0_Nano_SoC_top_level is
       hps_io_hps_io_gpio_inst_LOANIO54     : inout std_logic                     := 'X';             -- hps_io_gpio_inst_LOANIO54
       hps_io_hps_io_gpio_inst_LOANIO64     : inout std_logic                     := 'X';             -- hps_io_gpio_inst_LOANIO64
       hps_io_hps_io_gpio_inst_LOANIO65     : inout std_logic                     := 'X';             -- hps_io_gpio_inst_LOANIO65
+		piezo_controller_piezo_enable_piezo_enable_in : in    std_logic            := 'X';             -- piezo_enable_in
       piezo_controller_piezo_enable_export : out   std_logic;                                        -- export
-      piezo_controller_piezo_out_export    : out   std_logic_vector(88 downto 0);                    -- export
+      piezo_controller_piezo_out_export    : out   std_logic_vector(60 downto 0);                    -- export
       piezo_controller_piezo_status_export : out   std_logic_vector(2 downto 0);                     -- export
       reset_reset_n                        : in    std_logic                     := 'X';             -- reset_n
 		clock_divider_0_conduit_end_out_clk  : out   std_logic;                                        -- out_clk
-		rtc_0_conduit_end_event_trigger : in    std_logic                     := 'X'             -- event_trigger
+		rtc_0_conduit_end_event_trigger               : in    std_logic                     := 'L';             -- event_trigger
+		rtc_0_conduit_end_event_trigger2              : in    std_logic                     := 'X';              -- event_trigger2
+		rtc_0_conduit_end_piezo_enable                : out   std_logic                                         -- piezo_enable
     );
   end component soc_system;
 
@@ -173,6 +177,7 @@ architecture rtl of DE0_Nano_SoC_top_level is
   signal GPIO            	: std_logic_vector(3 downto 0) := (others => '0');
   signal led_avalon      	: std_logic_vector(7 downto 0);
   signal clk_div			 	: std_logic;
+  signal piezo_enable_rtc	: std_logic;
 
 begin
 
@@ -256,15 +261,18 @@ begin
     hps_h2f_loan_io_oe(65)                         => '1',
     fpga_key_input_export                          => KEY_N,
     fpga_led_output_export                         => led_avalon,
-    piezo_controller_piezo_out_export(87 downto 0) => PIEZO,
-    piezo_controller_piezo_out_export(88)          => piezo_out_0,
+    piezo_controller_piezo_out_export(59 downto 0) => PIEZO,
+    piezo_controller_piezo_out_export(60)          => piezo_out_0,
     piezo_controller_piezo_enable_export           => piezo_enable,
     piezo_controller_piezo_status_export           => piezo_status,
+	 piezo_controller_piezo_enable_piezo_enable_in 	=> piezo_enable_rtc,  --.piezo_enable_in
 	 clock_divider_0_conduit_end_out_clk  				=> clk_div,   --   clock_divider_0_conduit_end.out_clk
-	 rtc_0_conduit_end_event_trigger  => RTC_TRIGGER -- realtime_clock_controll_0_conduit_end.event_trigger
+	 rtc_0_conduit_end_event_trigger  					=> RTC_TRIGGER, -- realtime_clock_controll_0_conduit_end.event_trigger
+	 rtc_0_conduit_end_event_trigger2              	=> RTC_TRIGGER2,      -- event_trigger2
+	 rtc_0_conduit_end_piezo_enable                	=> piezo_enable_rtc     --.piezo_enable
   );
 
-  ENABLE  <= piezo_enable;
+  ENABLE  <= piezo_enable or piezo_enable_rtc;
 
   GPIO(0) <= piezo_status(0);                      -- sync
   GPIO(1) <= piezo_status(1);                      -- phase register in use ('0' = A, '1' = B)

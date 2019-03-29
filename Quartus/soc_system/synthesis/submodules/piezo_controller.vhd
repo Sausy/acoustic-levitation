@@ -152,6 +152,7 @@ begin
     elsif rising_edge(clk) then
 
       new_value <= '0';
+		enable <= piezo_enable_in;
 
       if AVS_Write = '1' then
         case AVS_Address is
@@ -159,7 +160,12 @@ begin
           when X"00" =>
 
             if period > 1 then                           -- Ensure "enable" is low if "period" < 2.
-              enable <= AVS_WriteData(0);
+					enable <= '0';
+					if AVS_WriteData(0) = '1' then
+						enable <= '1';
+					else
+						enable <= piezo_enable_in;
+					end if;
             else
               enable <= '0';
             end if;

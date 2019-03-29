@@ -1,43 +1,10 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:library
+EESchema Schematic File Version 4
 LIBS:acoustic_levitation_main-cache
-EELAYER 25 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 12
+Sheet 4 12
 Title "Acoustic levitation"
 Date "2018-03-24"
 Rev "1.0"
@@ -48,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L GND #PWR010
+L acoustic_levitation_main-rescue:GND #PWR010
 U 1 1 5AA96AC3
 P 6100 4800
 AR Path="/5AAA516B/5AA96AC3" Ref="#PWR010"  Part="1" 
@@ -57,7 +24,7 @@ AR Path="/5AAA7BDC/5AA96AC3" Ref="#PWR024"  Part="1"
 AR Path="/5AAA7C29/5AA96AC3" Ref="#PWR031"  Part="1" 
 AR Path="/5AAA7C6A/5AA96AC3" Ref="#PWR038"  Part="1" 
 AR Path="/5AAA7C7F/5AA96AC3" Ref="#PWR045"  Part="1" 
-F 0 "#PWR045" H 6100 4550 50  0001 C CNN
+F 0 "#PWR024" H 6100 4550 50  0001 C CNN
 F 1 "GND" H 6100 4650 50  0000 C CNN
 F 2 "" H 6100 4800 50  0001 C CNN
 F 3 "" H 6100 4800 50  0001 C CNN
@@ -65,7 +32,7 @@ F 3 "" H 6100 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR011
+L acoustic_levitation_main-rescue:GND #PWR011
 U 1 1 5AA9744B
 P 6200 2600
 AR Path="/5AAA516B/5AA9744B" Ref="#PWR011"  Part="1" 
@@ -74,7 +41,7 @@ AR Path="/5AAA7BDC/5AA9744B" Ref="#PWR025"  Part="1"
 AR Path="/5AAA7C29/5AA9744B" Ref="#PWR032"  Part="1" 
 AR Path="/5AAA7C6A/5AA9744B" Ref="#PWR039"  Part="1" 
 AR Path="/5AAA7C7F/5AA9744B" Ref="#PWR046"  Part="1" 
-F 0 "#PWR046" H 6200 2350 50  0001 C CNN
+F 0 "#PWR025" H 6200 2350 50  0001 C CNN
 F 1 "GND" H 6200 2450 50  0000 C CNN
 F 2 "" H 6200 2600 50  0001 C CNN
 F 3 "" H 6200 2600 50  0001 C CNN
@@ -82,7 +49,7 @@ F 3 "" H 6200 2600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C1
+L acoustic_levitation_main-rescue:C C1
 U 1 1 5AAA8E46
 P 4950 2350
 AR Path="/5AAA516B/5AAA8E46" Ref="C1"  Part="1" 
@@ -91,7 +58,7 @@ AR Path="/5AAA7BDC/5AAA8E46" Ref="C5"  Part="1"
 AR Path="/5AAA7C29/5AAA8E46" Ref="C7"  Part="1" 
 AR Path="/5AAA7C6A/5AAA8E46" Ref="C9"  Part="1" 
 AR Path="/5AAA7C7F/5AAA8E46" Ref="C11"  Part="1" 
-F 0 "C1" H 4975 2450 50  0000 L CNN
+F 0 "C5" H 4975 2450 50  0000 L CNN
 F 1 "100n" H 4975 2250 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4988 2200 50  0001 C CNN
 F 3 "" H 4950 2350 50  0001 C CNN
@@ -103,7 +70,7 @@ F 7 "732-8061-1-ND" H 4950 2350 60  0001 C CNN "Supplier1PartNumber"
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR012
+L acoustic_levitation_main-rescue:+3V3 #PWR012
 U 1 1 5AAA8E48
 P 4950 2000
 AR Path="/5AAA516B/5AAA8E48" Ref="#PWR012"  Part="1" 
@@ -112,7 +79,7 @@ AR Path="/5AAA7BDC/5AAA8E48" Ref="#PWR026"  Part="1"
 AR Path="/5AAA7C29/5AAA8E48" Ref="#PWR033"  Part="1" 
 AR Path="/5AAA7C6A/5AAA8E48" Ref="#PWR040"  Part="1" 
 AR Path="/5AAA7C7F/5AAA8E48" Ref="#PWR047"  Part="1" 
-F 0 "#PWR047" H 4950 1850 50  0001 C CNN
+F 0 "#PWR026" H 4950 1850 50  0001 C CNN
 F 1 "+3V3" H 4950 2140 50  0000 C CNN
 F 2 "" H 4950 2000 50  0001 C CNN
 F 3 "" H 4950 2000 50  0001 C CNN
@@ -120,7 +87,7 @@ F 3 "" H 4950 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +12V #PWR013
+L acoustic_levitation_main-rescue:+12V #PWR013
 U 1 1 5AAA8E49
 P 5650 2000
 AR Path="/5AAA516B/5AAA8E49" Ref="#PWR013"  Part="1" 
@@ -129,7 +96,8 @@ AR Path="/5AAA7BDC/5AAA8E49" Ref="#PWR027"  Part="1"
 AR Path="/5AAA7C29/5AAA8E49" Ref="#PWR034"  Part="1" 
 AR Path="/5AAA7C6A/5AAA8E49" Ref="#PWR041"  Part="1" 
 AR Path="/5AAA7C7F/5AAA8E49" Ref="#PWR048"  Part="1" 
-F 0 "#PWR048" H 5650 1850 50  0001 C CNN
+AR Path="/5AAA8E49" Ref="#PWR048"  Part="1" 
+F 0 "#PWR027" H 5650 1850 50  0001 C CNN
 F 1 "+12V" H 5650 2140 50  0000 C CNN
 F 2 "" H 5650 2000 50  0001 C CNN
 F 3 "" H 5650 2000 50  0001 C CNN
@@ -137,7 +105,7 @@ F 3 "" H 5650 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR014
+L acoustic_levitation_main-rescue:GND #PWR014
 U 1 1 5AAA8E4A
 P 4950 2600
 AR Path="/5AAA516B/5AAA8E4A" Ref="#PWR014"  Part="1" 
@@ -146,7 +114,7 @@ AR Path="/5AAA7BDC/5AAA8E4A" Ref="#PWR028"  Part="1"
 AR Path="/5AAA7C29/5AAA8E4A" Ref="#PWR035"  Part="1" 
 AR Path="/5AAA7C6A/5AAA8E4A" Ref="#PWR042"  Part="1" 
 AR Path="/5AAA7C7F/5AAA8E4A" Ref="#PWR049"  Part="1" 
-F 0 "#PWR049" H 4950 2350 50  0001 C CNN
+F 0 "#PWR028" H 4950 2350 50  0001 C CNN
 F 1 "GND" H 4950 2450 50  0000 C CNN
 F 2 "" H 4950 2600 50  0001 C CNN
 F 3 "" H 4950 2600 50  0001 C CNN
@@ -154,7 +122,7 @@ F 3 "" H 4950 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR015
+L acoustic_levitation_main-rescue:+3V3 #PWR015
 U 1 1 5AAA8E4B
 P 4600 2750
 AR Path="/5AAA516B/5AAA8E4B" Ref="#PWR015"  Part="1" 
@@ -163,7 +131,7 @@ AR Path="/5AAA7BDC/5AAA8E4B" Ref="#PWR029"  Part="1"
 AR Path="/5AAA7C29/5AAA8E4B" Ref="#PWR036"  Part="1" 
 AR Path="/5AAA7C6A/5AAA8E4B" Ref="#PWR043"  Part="1" 
 AR Path="/5AAA7C7F/5AAA8E4B" Ref="#PWR050"  Part="1" 
-F 0 "#PWR050" H 4600 2600 50  0001 C CNN
+F 0 "#PWR029" H 4600 2600 50  0001 C CNN
 F 1 "+3V3" H 4600 2890 50  0000 C CNN
 F 2 "" H 4600 2750 50  0001 C CNN
 F 3 "" H 4600 2750 50  0001 C CNN
@@ -171,7 +139,7 @@ F 3 "" H 4600 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR016
+L acoustic_levitation_main-rescue:GND #PWR016
 U 1 1 5AAA6DA1
 P 4500 4800
 AR Path="/5AAA516B/5AAA6DA1" Ref="#PWR016"  Part="1" 
@@ -180,7 +148,7 @@ AR Path="/5AAA7BDC/5AAA6DA1" Ref="#PWR030"  Part="1"
 AR Path="/5AAA7C29/5AAA6DA1" Ref="#PWR037"  Part="1" 
 AR Path="/5AAA7C6A/5AAA6DA1" Ref="#PWR044"  Part="1" 
 AR Path="/5AAA7C7F/5AAA6DA1" Ref="#PWR051"  Part="1" 
-F 0 "#PWR051" H 4500 4550 50  0001 C CNN
+F 0 "#PWR030" H 4500 4550 50  0001 C CNN
 F 1 "GND" H 4500 4650 50  0000 C CNN
 F 2 "" H 4500 4800 50  0001 C CNN
 F 3 "" H 4500 4800 50  0001 C CNN
@@ -188,15 +156,15 @@ F 3 "" H 4500 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5350 2100 5350 2700
+	5350 2100 5350 2600
 Wire Wire Line
 	5350 2600 5500 2600
 Wire Wire Line
 	5500 2600 5500 2700
 Wire Wire Line
-	5650 2500 5650 2700
+	5650 2500 5650 2600
 Wire Wire Line
-	5650 2600 6200 2600
+	5650 2600 5800 2600
 Wire Wire Line
 	6100 2600 6100 2700
 Wire Wire Line
@@ -207,7 +175,7 @@ Wire Wire Line
 Connection ~ 5950 2600
 Connection ~ 6100 2600
 Wire Wire Line
-	4950 2000 4950 2200
+	4950 2000 4950 2100
 Wire Wire Line
 	4950 2500 4950 2600
 Wire Wire Line
@@ -218,15 +186,15 @@ Connection ~ 4950 2100
 Wire Wire Line
 	5350 2100 5650 2100
 Wire Wire Line
-	5650 2000 5650 2200
+	5650 2000 5650 2100
 Connection ~ 5350 2600
 Connection ~ 5650 2100
 Connection ~ 5650 2600
 Wire Wire Line
-	5350 4700 6100 4700
+	5350 4700 5500 4700
 Connection ~ 5800 4700
 Wire Wire Line
-	6100 4600 6100 4800
+	6100 4600 6100 4700
 Wire Wire Line
 	5950 4600 5950 4700
 Connection ~ 5950 4700
@@ -370,24 +338,22 @@ Wire Wire Line
 	6950 4300 6950 5100
 Wire Wire Line
 	6950 5100 7550 5100
-Wire Bus Line
-	4000 2800 4000 4100
 Wire Wire Line
 	4600 4300 4700 4300
 Wire Wire Line
-	4600 2750 4600 4300
+	4600 2750 4600 3100
 Wire Wire Line
 	4700 4100 4600 4100
 Connection ~ 4600 4100
 Wire Wire Line
 	4700 3700 4500 3700
 Wire Wire Line
-	4500 3600 4500 4800
+	4500 3600 4500 3700
 Wire Wire Line
 	4700 3600 4500 3600
 Connection ~ 4500 3700
 $Comp
-L C C2
+L acoustic_levitation_main-rescue:C C2
 U 1 1 5AC4D782
 P 5650 2350
 AR Path="/5AAA516B/5AC4D782" Ref="C2"  Part="1" 
@@ -396,7 +362,7 @@ AR Path="/5AAA7BDC/5AC4D782" Ref="C6"  Part="1"
 AR Path="/5AAA7C29/5AC4D782" Ref="C8"  Part="1" 
 AR Path="/5AAA7C6A/5AC4D782" Ref="C10"  Part="1" 
 AR Path="/5AAA7C7F/5AC4D782" Ref="C12"  Part="1" 
-F 0 "C2" H 5675 2450 50  0000 L CNN
+F 0 "C6" H 5675 2450 50  0000 L CNN
 F 1 "100n" H 5675 2250 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5688 2200 50  0001 C CNN
 F 3 "" H 5650 2350 50  0001 C CNN
@@ -408,7 +374,7 @@ F 7 "732-8061-1-ND" H 5650 2350 60  0001 C CNN "Supplier1PartNumber"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MAX17079 U1
+L acoustic_levitation_main-rescue:MAX17079 U1
 U 1 1 5AC4D7DE
 P 5650 3650
 AR Path="/5AAA516B/5AC4D7DE" Ref="U1"  Part="1" 
@@ -417,7 +383,7 @@ AR Path="/5AAA7BDC/5AC4D7DE" Ref="U3"  Part="1"
 AR Path="/5AAA7C29/5AC4D7DE" Ref="U4"  Part="1" 
 AR Path="/5AAA7C6A/5AC4D7DE" Ref="U5"  Part="1" 
 AR Path="/5AAA7C7F/5AC4D7DE" Ref="U6"  Part="1" 
-F 0 "U1" H 6200 4500 60  0000 L CNN
+F 0 "U3" H 6200 4500 60  0000 L CNN
 F 1 "MAX17079" H 6200 2800 60  0000 L CNN
 F 2 "footprints:QFN-40-1EP_6x6mm_Pitch0.5mm_HandSoldering" H 6200 2700 50  0001 L CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/MAX17079.pdf" H 6200 2600 50  0001 L CNN
@@ -429,7 +395,7 @@ F 7 "Maxim Integrated" H 6200 2500 50  0001 L CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MA40S4S TR1
+L acoustic_levitation_main-rescue:MA40S4S TR1
 U 1 1 5AC4D8A9
 P 7550 2400
 AR Path="/5AAA516B/5AC4D8A9" Ref="TR1"  Part="1" 
@@ -438,7 +404,7 @@ AR Path="/5AAA7BDC/5AC4D8A9" Ref="TR13"  Part="1"
 AR Path="/5AAA7C29/5AC4D8A9" Ref="TR19"  Part="1" 
 AR Path="/5AAA7C6A/5AC4D8A9" Ref="TR25"  Part="1" 
 AR Path="/5AAA7C7F/5AC4D8A9" Ref="TR31"  Part="1" 
-F 0 "TR1" H 7650 2500 50  0000 L CNN
+F 0 "TR13" H 7650 2500 50  0000 L CNN
 F 1 "MA40S4S" H 7650 2300 50  0000 L CNN
 F 2 "footprints:Murata_MA40S4S_TE_8134-HC-8P2" H 7650 2200 50  0001 L CNN
 F 3 "https://www.murata.com/~/media/webrenewal/products/sensor/ultrasonic/open/datasheet_maopn.pdf" H 7650 2100 50  0001 L CNN
@@ -450,7 +416,7 @@ F 7 "Murata" H 7650 2000 50  0001 L CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MA40S4S TR2
+L acoustic_levitation_main-rescue:MA40S4S TR2
 U 1 1 5AC4D904
 P 7550 2900
 AR Path="/5AAA516B/5AC4D904" Ref="TR2"  Part="1" 
@@ -459,7 +425,7 @@ AR Path="/5AAA7BDC/5AC4D904" Ref="TR14"  Part="1"
 AR Path="/5AAA7C29/5AC4D904" Ref="TR20"  Part="1" 
 AR Path="/5AAA7C6A/5AC4D904" Ref="TR26"  Part="1" 
 AR Path="/5AAA7C7F/5AC4D904" Ref="TR32"  Part="1" 
-F 0 "TR2" H 7650 3000 50  0000 L CNN
+F 0 "TR14" H 7650 3000 50  0000 L CNN
 F 1 "MA40S4S" H 7650 2800 50  0000 L CNN
 F 2 "footprints:Murata_MA40S4S_TE_8134-HC-8P2" H 7650 2700 50  0001 L CNN
 F 3 "https://www.murata.com/~/media/webrenewal/products/sensor/ultrasonic/open/datasheet_maopn.pdf" H 7650 2600 50  0001 L CNN
@@ -471,7 +437,7 @@ F 7 "Murata" H 7650 2500 50  0001 L CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MA40S4S TR3
+L acoustic_levitation_main-rescue:MA40S4S TR3
 U 1 1 5AC4D930
 P 7550 3400
 AR Path="/5AAA516B/5AC4D930" Ref="TR3"  Part="1" 
@@ -480,7 +446,7 @@ AR Path="/5AAA7BDC/5AC4D930" Ref="TR15"  Part="1"
 AR Path="/5AAA7C29/5AC4D930" Ref="TR21"  Part="1" 
 AR Path="/5AAA7C6A/5AC4D930" Ref="TR27"  Part="1" 
 AR Path="/5AAA7C7F/5AC4D930" Ref="TR33"  Part="1" 
-F 0 "TR3" H 7650 3500 50  0000 L CNN
+F 0 "TR15" H 7650 3500 50  0000 L CNN
 F 1 "MA40S4S" H 7650 3300 50  0000 L CNN
 F 2 "footprints:Murata_MA40S4S_TE_8134-HC-8P2" H 7650 3200 50  0001 L CNN
 F 3 "https://www.murata.com/~/media/webrenewal/products/sensor/ultrasonic/open/datasheet_maopn.pdf" H 7650 3100 50  0001 L CNN
@@ -492,7 +458,7 @@ F 7 "Murata" H 7650 3000 50  0001 L CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MA40S4S TR4
+L acoustic_levitation_main-rescue:MA40S4S TR4
 U 1 1 5AC4D961
 P 7550 3900
 AR Path="/5AAA516B/5AC4D961" Ref="TR4"  Part="1" 
@@ -501,7 +467,7 @@ AR Path="/5AAA7BDC/5AC4D961" Ref="TR16"  Part="1"
 AR Path="/5AAA7C29/5AC4D961" Ref="TR22"  Part="1" 
 AR Path="/5AAA7C6A/5AC4D961" Ref="TR28"  Part="1" 
 AR Path="/5AAA7C7F/5AC4D961" Ref="TR34"  Part="1" 
-F 0 "TR4" H 7650 4000 50  0000 L CNN
+F 0 "TR16" H 7650 4000 50  0000 L CNN
 F 1 "MA40S4S" H 7650 3800 50  0000 L CNN
 F 2 "footprints:Murata_MA40S4S_TE_8134-HC-8P2" H 7650 3700 50  0001 L CNN
 F 3 "https://www.murata.com/~/media/webrenewal/products/sensor/ultrasonic/open/datasheet_maopn.pdf" H 7650 3600 50  0001 L CNN
@@ -513,7 +479,7 @@ F 7 "Murata" H 7650 3500 50  0001 L CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MA40S4S TR5
+L acoustic_levitation_main-rescue:MA40S4S TR5
 U 1 1 5AC4D997
 P 7550 4400
 AR Path="/5AAA516B/5AC4D997" Ref="TR5"  Part="1" 
@@ -522,7 +488,7 @@ AR Path="/5AAA7BDC/5AC4D997" Ref="TR17"  Part="1"
 AR Path="/5AAA7C29/5AC4D997" Ref="TR23"  Part="1" 
 AR Path="/5AAA7C6A/5AC4D997" Ref="TR29"  Part="1" 
 AR Path="/5AAA7C7F/5AC4D997" Ref="TR35"  Part="1" 
-F 0 "TR5" H 7650 4500 50  0000 L CNN
+F 0 "TR17" H 7650 4500 50  0000 L CNN
 F 1 "MA40S4S" H 7650 4300 50  0000 L CNN
 F 2 "footprints:Murata_MA40S4S_TE_8134-HC-8P2" H 7650 4200 50  0001 L CNN
 F 3 "https://www.murata.com/~/media/webrenewal/products/sensor/ultrasonic/open/datasheet_maopn.pdf" H 7650 4100 50  0001 L CNN
@@ -534,7 +500,7 @@ F 7 "Murata" H 7650 4000 50  0001 L CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MA40S4S TR6
+L acoustic_levitation_main-rescue:MA40S4S TR6
 U 1 1 5AC4D9CF
 P 7550 4900
 AR Path="/5AAA516B/5AC4D9CF" Ref="TR6"  Part="1" 
@@ -543,7 +509,7 @@ AR Path="/5AAA7BDC/5AC4D9CF" Ref="TR18"  Part="1"
 AR Path="/5AAA7C29/5AC4D9CF" Ref="TR24"  Part="1" 
 AR Path="/5AAA7C6A/5AC4D9CF" Ref="TR30"  Part="1" 
 AR Path="/5AAA7C7F/5AC4D9CF" Ref="TR36"  Part="1" 
-F 0 "TR6" H 7650 5000 50  0000 L CNN
+F 0 "TR18" H 7650 5000 50  0000 L CNN
 F 1 "MA40S4S" H 7650 4800 50  0000 L CNN
 F 2 "footprints:Murata_MA40S4S_TE_8134-HC-8P2" H 7650 4700 50  0001 L CNN
 F 3 "https://www.murata.com/~/media/webrenewal/products/sensor/ultrasonic/open/datasheet_maopn.pdf" H 7650 4600 50  0001 L CNN
@@ -554,4 +520,40 @@ F 7 "Murata" H 7650 4500 50  0001 L CNN "Manufacturer"
 	1    7550 4900
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5800 2600 5950 2600
+Wire Wire Line
+	5950 2600 6100 2600
+Wire Wire Line
+	6100 2600 6200 2600
+Wire Wire Line
+	4950 2100 4950 2200
+Wire Wire Line
+	5350 2600 5350 2700
+Wire Wire Line
+	5650 2100 5650 2200
+Wire Wire Line
+	5650 2600 5650 2700
+Wire Wire Line
+	5800 4700 5950 4700
+Wire Wire Line
+	5950 4700 6100 4700
+Wire Wire Line
+	5500 4700 5800 4700
+Wire Wire Line
+	4600 3900 4600 4100
+Wire Wire Line
+	4600 3500 4600 3900
+Wire Wire Line
+	4600 3300 4600 3500
+Wire Wire Line
+	4600 3100 4600 3300
+Wire Wire Line
+	6100 4700 6100 4800
+Wire Wire Line
+	4600 4100 4600 4300
+Wire Wire Line
+	4500 3700 4500 4800
+Wire Bus Line
+	4000 2800 4000 4100
 $EndSCHEMATC

@@ -70,10 +70,12 @@ module soc_system (
 	hps_io_hps_io_gpio_inst_LOANIO64,
 	hps_io_hps_io_gpio_inst_LOANIO65,
 	piezo_controller_piezo_enable_export,
+	piezo_controller_piezo_enable_piezo_enable_in,
 	piezo_controller_piezo_out_export,
 	piezo_controller_piezo_status_export,
+	reset_reset_n,
 	rtc_0_conduit_end_event_trigger,
-	reset_reset_n);	
+	rtc_0_conduit_end_piezo_enable);	
 
 	input		clk_clk;
 	output		clock_divider_0_conduit_end_out_clk;
@@ -145,8 +147,10 @@ module soc_system (
 	inout		hps_io_hps_io_gpio_inst_LOANIO64;
 	inout		hps_io_hps_io_gpio_inst_LOANIO65;
 	output		piezo_controller_piezo_enable_export;
-	output	[88:0]	piezo_controller_piezo_out_export;
+	input		piezo_controller_piezo_enable_piezo_enable_in;
+	output	[60:0]	piezo_controller_piezo_out_export;
 	output	[2:0]	piezo_controller_piezo_status_export;
-	input		rtc_0_conduit_end_event_trigger;
 	input		reset_reset_n;
+	input		rtc_0_conduit_end_event_trigger;
+	output		rtc_0_conduit_end_piezo_enable;
 endmodule

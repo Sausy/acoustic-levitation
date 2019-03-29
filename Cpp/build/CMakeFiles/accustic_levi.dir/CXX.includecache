@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+../lib/config.hpp
+
 ../lib/fpga_interface.hpp
 stdint.h
 -
@@ -33,12 +35,16 @@ trap.h
 ../lib/time_controll.hpp
 stdint.h
 -
+config.hpp
+../lib/config.hpp
 
 ../lib/trap.h
 stdint.h
 -
 peripherals.h
 ../lib/peripherals.h
+
+/home/roboy/BikeToRikshaw/acoustic-levitation/Cpp/build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
 
 /home/roboy/BikeToRikshaw/acoustic-levitation/Cpp/src/fpga_interface.cpp
 fpga_interface.hpp

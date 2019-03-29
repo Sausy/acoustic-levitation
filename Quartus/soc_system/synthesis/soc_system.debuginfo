@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="soc_system" kind="system" version="18.0" fabric="QSYS">
  <!-- Format version 18.0 614 (Future versions may contain additional information.) -->
- <!-- 2019.03.28.13:32:58 -->
+ <!-- 2019.03.29.00:16:41 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1553776339</value>
+  <value>1553814962</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -42794,7 +42794,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="piezo_count">
    <type>int</type>
-   <value>89</value>
+   <value>61</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -43328,7 +43328,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>piezo_out</name>
     <direction>Output</direction>
-    <width>89</width>
+    <width>61</width>
     <role>export</role>
    </port>
   </interface>
@@ -43556,6 +43556,18 @@ parameters are a RESULT of the module parameters. -->
     <direction>Input</direction>
     <width>1</width>
     <role>event_trigger</role>
+   </port>
+   <port>
+    <name>piezo_enable</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>piezo_enable</role>
+   </port>
+   <port>
+    <name>event_trigger2</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>event_trigger2</role>
    </port>
   </interface>
   <interface name="reset" kind="reset_sink" version="18.0">
@@ -48797,5 +48809,5 @@ parameters are a RESULT of the module parameters. -->
   <version>18.0</version>
  </plugin>
  <reportVersion>18.0 614</reportVersion>
- <uniqueIdentifier>4CCC6A6BE10F00000169C449BAAE</uniqueIdentifier>
+ <uniqueIdentifier>4CCC6A6BE10F00000169C6970E94</uniqueIdentifier>
 </EnsembleReport>

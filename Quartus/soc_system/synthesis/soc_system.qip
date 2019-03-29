@@ -2,7 +2,7 @@ set_global_assignment -entity "soc_system" -library "soc_system" -name IP_TOOL_N
 set_global_assignment -entity "soc_system" -library "soc_system" -name IP_TOOL_VERSION "18.0"
 set_global_assignment -entity "soc_system" -library "soc_system" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "soc_system" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../soc_system.sopcinfo"]
-set_global_assignment -entity "soc_system" -library "soc_system" -name SLD_INFO "QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1553776339"
+set_global_assignment -entity "soc_system" -library "soc_system" -name SLD_INFO "QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1553814962"
 set_global_assignment -library "soc_system" -name MISC_FILE [file join $::quartus(qip_path) "../soc_system.cmp"]
 set_global_assignment -library "soc_system" -name SLD_FILE [file join $::quartus(qip_path) "soc_system.regmap"]
 set_global_assignment -library "soc_system" -name MISC_FILE [file join $::quartus(qip_path) "soc_system_hps_0_hps.svd"]
@@ -17,7 +17,7 @@ set_global_assignment -entity "soc_system" -library "soc_system" -name IP_COMPON
 set_global_assignment -entity "soc_system" -library "soc_system" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "soc_system" -library "soc_system" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "soc_system" -library "soc_system" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "soc_system" -library "soc_system" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTU1Mzc3NjMzOQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "soc_system" -library "soc_system" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTU1MzgxNDk2Mg==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "soc_system" -library "soc_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "soc_system" -library "soc_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNFUyM0M2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "soc_system" -library "soc_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -677,7 +677,7 @@ set_global_assignment -entity "piezo_controller" -library "soc_system" -name IP_
 set_global_assignment -entity "piezo_controller" -library "soc_system" -name IP_COMPONENT_AUTHOR "TMOpYSBTdHJvYmlubw=="
 set_global_assignment -entity "piezo_controller" -library "soc_system" -name IP_COMPONENT_VERSION "MS4w"
 set_global_assignment -entity "piezo_controller" -library "soc_system" -name IP_COMPONENT_PARAMETER "Y2xvY2tfcmF0ZQ==::NTAwMDAwMDA=::Q2xvY2sgZnJlcXVlbmN5"
-set_global_assignment -entity "piezo_controller" -library "soc_system" -name IP_COMPONENT_PARAMETER "cGllem9fY291bnQ=::ODk=::UGllem8gY291bnQ="
+set_global_assignment -entity "piezo_controller" -library "soc_system" -name IP_COMPONENT_PARAMETER "cGllem9fY291bnQ=::NjE=::UGllem8gY291bnQ="
 set_instance_assignment -name HPS_LOCATION PIN_P19A0T -entity soc_system_hps_0 -to hps_io|border|hps_io_emac1_inst_TX_CLK[0]
 set_instance_assignment -name HPS_LOCATION PIN_P19B0T -entity soc_system_hps_0 -to hps_io|border|hps_io_emac1_inst_TXD0[0]
 set_instance_assignment -name HPS_LOCATION PIN_P19A1T -entity soc_system_hps_0 -to hps_io|border|hps_io_emac1_inst_TXD1[0]

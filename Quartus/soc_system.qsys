@@ -805,7 +805,7 @@
    version="1.0"
    enabled="1">
   <parameter name="clock_rate" value="50000000" />
-  <parameter name="piezo_count" value="89" />
+  <parameter name="piezo_count" value="61" />
  </module>
  <module
    name="realtime_clock_controll_0"

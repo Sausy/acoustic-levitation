@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdint.h>
+#include "config.hpp"
 
 #ifndef IORD
   #define IORD(base, reg) (*(((volatile int32_t*)base)+reg))
@@ -20,6 +21,11 @@ class rtc_ctl
 
     void start_US_out();
     void stop_US_out();
+
+    uint32_t US_start_time;
+
+    void get_master_time();
+    void get_slave_time();
 
 
   private:

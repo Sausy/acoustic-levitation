@@ -75,10 +75,12 @@ module soc_system (
 		inout  wire        hps_io_hps_io_gpio_inst_LOANIO65,              //                              .hps_io_gpio_inst_LOANIO65
 		output wire        piezo_controller_piezo_enable_export,          // piezo_controller_piezo_enable.export
 		input  wire        piezo_controller_piezo_enable_piezo_enable_in, //                              .piezo_enable_in
-		output wire [88:0] piezo_controller_piezo_out_export,             //    piezo_controller_piezo_out.export
+		output wire [60:0] piezo_controller_piezo_out_export,             //    piezo_controller_piezo_out.export
 		output wire [2:0]  piezo_controller_piezo_status_export,          // piezo_controller_piezo_status.export
 		input  wire        reset_reset_n,                                 //                         reset.reset_n
-		input  wire        rtc_0_conduit_end_event_trigger                //             rtc_0_conduit_end.event_trigger
+		input  wire        rtc_0_conduit_end_event_trigger,               //             rtc_0_conduit_end.event_trigger
+		output wire        rtc_0_conduit_end_piezo_enable,                //                              .piezo_enable
+		input  wire        rtc_0_conduit_end_event_trigger2               //                              .event_trigger2
 	);
 
 	wire   [1:0] hps_0_h2f_lw_axi_master_awburst;                                      // hps_0:h2f_lw_AWBURST -> mm_interconnect_0:hps_0_h2f_lw_axi_master_awburst
@@ -287,7 +289,7 @@ module soc_system (
 	);
 
 	piezo_controller #(
-		.piezo_count (89)
+		.piezo_count (61)
 	) piezo_controller_0 (
 		.clk             (clk_clk),                                           //          clk.clk
 		.reset_n         (~rst_controller_001_reset_out_reset),               //        reset.reset_n
@@ -308,6 +310,8 @@ module soc_system (
 	) realtime_clock_controll_0 (
 		.clock                    (clk_clk),                                                              //   clock_sink.clk
 		.event_trigger            (rtc_0_conduit_end_event_trigger),                                      //  conduit_end.event_trigger
+		.piezo_enable             (rtc_0_conduit_end_piezo_enable),                                       //             .piezo_enable
+		.event_trigger2           (rtc_0_conduit_end_event_trigger2),                                     //             .event_trigger2
 		.reset                    (rst_controller_reset_out_reset),                                       //        reset.reset
 		.avalon_slave_address     (mm_interconnect_0_realtime_clock_controll_0_avalon_slave_address),     // avalon_slave.address
 		.avalon_slave_read        (mm_interconnect_0_realtime_clock_controll_0_avalon_slave_read),        //             .read
