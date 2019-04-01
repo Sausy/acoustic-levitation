@@ -61,3 +61,6 @@ restart
 # Loading work.trigger_tb_
 # Loading work.trigger_tb
 run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/roboy/BikeToRikshaw/acoustic-levitation/testbench/simulation/modelsim/wave.do
+# End time: 13:42:47 on Mar 29,2019, Elapsed time: 19:48:36
+# Errors: 0, Warnings: 0
